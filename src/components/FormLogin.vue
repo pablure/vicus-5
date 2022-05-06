@@ -2,14 +2,6 @@
   <div id="form">
     <form action="#" method="post" class="form">
       <div class="element">
-        <label for="nombre">Nombre</label><br>
-        <input type="text" id="nombre" name="nombre" value="" class="" required autofocus/>
-      </div>
-      <div class="element">
-        <label for="apellidos">Apellidos</label><br>
-        <input type="text" id="apellidos" name="apellidos" value="" class="" required autofocus/>
-      </div>
-      <div class="element">
         <label for="login">Login</label><br>
         <input type="text" id="login" name="login" value="" class="" required autofocus/>
       </div>
@@ -17,18 +9,14 @@
         <label for="password">Contraseña</label><br>
         <input type="password" id="apellidos" name="apellidos" value="" class="" required/>
       </div>
-      <div class="element">
-        <label for="password">Confirma contraseña</label><br>
-        <input type="password" id="apellidos" name="apellidos" value="" class="" required/>
-      </div>
-      <input type="submit" name="boton" value="Registrar"  id="boton" class="">
+      <input type="submit" name="boton" value="Entrar"  id="boton" class="">
     </form>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'FormRegistro'
+    name: 'FormLogin'
 }
 </script>
 
