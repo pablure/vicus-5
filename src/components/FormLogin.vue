@@ -42,6 +42,7 @@ export default {
             } else {
                 if (response.data.data.resultado === 'no_ok') {
                     console.log('Usuario no Registrado')
+                    this.resetInputs()
                 }
             }
         },
