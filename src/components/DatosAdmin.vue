@@ -1,21 +1,26 @@
 <template>
   <div id="info">
-      <h4 >Propietario</h4>
+      <h4 >ADMINISTRADOR</h4>
       <div class="element">
-          <h5>Nombre: <span>Pablo</span></h5>
+          <h5>Nombre: <span>Nombre ADMIN</span></h5>
         </div>
       <div class="element">
-          <h5>Apellidos: <span>Gago Rajal</span></h5>
+          <h5>Apellidos: <span>Apellido1 Apellid2</span></h5>
       </div>
       <div class="element">
-          <h5>Comunidad: <span>Lomas del Cañaveral</span></h5>
+          <label for="">Comunidad:</label>
+            <select class="input" name="zona" id="zona">
+                <option name="lomas" value="Piscina">Lomas del Cañaveral</option>
+                <option name="egeo" value="Pista de Padel">Mar Egeo</option>
+                <option name="caspio" value="Sala 1">Mar Caspio</option>          
+            </select>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'DatosLogueado'
+    name: 'DatosAdmin'
     
 }
 </script>
@@ -39,5 +44,9 @@ export default {
 }
 span{
     font-weight: 400;
+}
+.input{
+    
+    margin-left: 10px;
 }
 </style>

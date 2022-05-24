@@ -35,8 +35,14 @@ export default {
                 login: this.datosFormulario.login,
                 password: this.datosFormulario.password
             })
-            if (response.data.data.resultado === 'ok') {
+            if (response.data.resultado === 'ok') {
                 console.log('Usuario Registrado')
+                this.resetInputs()
+
+                localStorage.login = response.data.login
+                localStorage.id_usuario = response.data.id
+
+                this.$router.push(`/${localStorage.login}`)
                 this.resetInputs()
         
             } else {
@@ -46,10 +52,10 @@ export default {
                 }
             }
         },
-        resetInputs () {
-            this.datosFormulario.login = ''
-            this.datosFormulario.password = ''
-        }
+        //resetInputs () {
+          //  this.datosFormulario.login = ''
+            //this.datosFormulario.password = ''
+        //}
     }
     
 }
@@ -93,6 +99,8 @@ label{
   height: 35px;
   margin-top: 15px;
   background-color: #e6a3eb;
+  transition: all 300ms;
+  
 }
 #boton:hover{
   background-color: #c219ce;

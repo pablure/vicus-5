@@ -3,7 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/registro">Regístrate</router-link> |
     <router-link to="/login">Login</router-link> |
-    <router-link to="/about">About</router-link>
+    <a href="https://landing-vicus.netlify.app" target="_blank">Landing</a>
   </nav>
   <router-view/>
 </template>

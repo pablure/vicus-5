@@ -1,20 +1,27 @@
 <template>
-  <Titulo texto="Usuario registrado"/>
+  <Titulo texto="Administrador registrado"/>
   <!--<h2>Parametro: {{ $route.params.id }}</h2>-->
   <div class="elementos">
-    <DatosLogueado />
-    <AccionesUsuario /> 
+    <DatosAdmin />
+    <AdminUsuarios />
+    <AdminZonas />
   </div>
 </template>
 
 <script>
 import Titulo from '../components/Titulo'
 import AccionesUsuario from '../components/AccionesUsuario.vue'
-import DatosLogueado from '../components/DatosLogueado.vue'
+import DatosAdmin from '@/components/DatosAdmin.vue'
+import AdminUsuarios from '@/components/AdminUsuarios.vue'
+import AdminZonas from '../components/AdminZonas.vue'
 export default {
     components:{
-        Titulo, DatosLogueado, AccionesUsuario
-    }
+    Titulo,
+    AccionesUsuario,
+    DatosAdmin,
+    AdminUsuarios,
+    AdminZonas
+}
 }
 </script>
 
