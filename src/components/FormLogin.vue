@@ -10,7 +10,8 @@
         <label for="password">Contraseña</label><br>
         <input v-model="datosFormulario.password" type="password" id="password" name="password" required/>
       </div>
-      <input @click="logear" type="submit" name="boton" value="Entrar" id="boton">
+      <!--<input @click="logear" type="submit" name="boton" value="Entrar" id="boton">-->
+      <input @click="probarAdmin" type="submit" name="boton" value="Entrar" id="boton">
     </form>
   </div>
 </template>
@@ -30,6 +31,13 @@ export default {
         }       
     },
     methods: {
+        probarAdmin() {
+          if (this.datosFormulario.login === 'admin') {
+            this.$router.push(`/${'admin'}`)
+          } else {
+            this.$router.push(`/${localStorage.login}`)
+          }
+        },
         async logear () {
             const response = await axios.post('http://localhost/api/?servicio=login', {
                 login: this.datosFormulario.login,
